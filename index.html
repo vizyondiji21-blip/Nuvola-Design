@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuvola Design | Premium Ergonomic Solutions</title>
+    <title>Nuvola Design | Premium Office Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -25,6 +25,7 @@
             line-height: 1.6;
         }
 
+        /* --- Navigasyon --- */
         nav {
             position: fixed;
             top: 0; width: 100%;
@@ -50,18 +51,17 @@
 
         .nav-links a:hover { color: var(--accent); }
 
-        /* HERO BÖLÜMÜ */
+        /* --- Hero Alanı --- */
         #anasayfa {
             height: 100vh;
-            /* Arka plan görseli Giriş.jpg olarak güncellendi */
             background: linear-gradient(rgba(10, 14, 20, 0.5), rgba(10, 14, 20, 0.5)), 
-                        url('Giriş.jpg') no-repeat center center/cover;
+                        url('hero-bg.png') no-repeat center center/cover;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             text-align: center; color: var(--light); padding: 0 20px;
         }
 
         .main-logo {
-            max-width: 400px; width: 80%;
+            max-width: 420px; width: 80%;
             margin-bottom: 20px;
             animation: fadeIn 2s ease-out;
         }
@@ -71,12 +71,18 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* --- Bölümler --- */
         section { padding: 100px 10%; }
         .section-title {
             font-size: 1.8rem; margin-bottom: 60px; text-align: center;
             letter-spacing: 4px; text-transform: uppercase; font-weight: 600;
         }
 
+        /* --- Hakkımızda --- */
+        #hakkimizda { background-color: var(--gray); text-align: center; }
+        .about-text { max-width: 800px; margin: 0 auto; font-weight: 300; font-size: 1.1rem; }
+
+        /* --- Koleksiyonlar (Zikzak Yapı) --- */
         .package-row {
             display: flex; align-items: center; gap: 60px; margin-bottom: 100px;
         }
@@ -97,20 +103,25 @@
         }
         .btn-teklif:hover { background: var(--dark); color: var(--light); }
 
+        /* --- İletişim --- */
         #iletisim { background: var(--dark); color: var(--light); text-align: center; }
         .contact-grid { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px; }
         .contact-item i { font-size: 1.8rem; color: var(--accent); margin-bottom: 15px; display: block; }
 
+        /* --- WhatsApp --- */
         .whatsapp-float {
             position: fixed; width: 60px; height: 60px; bottom: 35px; right: 35px;
             background-color: #25d366; color: white; border-radius: 50px;
             display: flex; align-items: center; justify-content: center;
             font-size: 30px; z-index: 2000; text-decoration: none;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s ease;
         }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
+        /* --- Mobil --- */
         @media (max-width: 992px) {
-            .package-row, .package-row:nth-child(even) { flex-direction: column; text-align: center; }
+            .package-row, .package-row:nth-child(even) { flex-direction: column; text-align: center; gap: 30px; }
             .nav-links { display: none; }
         }
     </style>
@@ -118,7 +129,7 @@
 <body>
 
     <nav>
-        <div class="nav-logo"><img src="logo.jpg" alt="Nuvola"></div>
+        <div class="nav-logo"><img src="Logo.png" alt="Nuvola"></div>
         <div class="nav-links">
             <a href="#anasayfa">Anasayfa</a>
             <a href="#hakkimizda">Hikayemiz</a>
@@ -128,24 +139,22 @@
     </nav>
 
     <header id="anasayfa">
-        <img src="logo.jpg" alt="Nuvola Design" class="main-logo">
+        <img src="Logo.png" alt="Nuvola Design" class="main-logo">
         <p style="letter-spacing: 5px; font-weight: 300; text-transform: uppercase;">Premium Ergonomic Solutions</p>
     </header>
 
-    <section id="hakkimizda" style="background: var(--gray);">
+    <section id="hakkimizda">
         <h2 class="section-title">Hikayemiz</h2>
-        <p style="max-width: 800px; margin: 0 auto; text-align: center; font-weight: 300;">
-            Nuvola Design olarak, çalışma alanlarını sadece bir görev yeri değil, birer ilham kaynağı olarak görüyoruz. 
-            Minimalist estetiği, en yüksek düzeydeki ergonomik standartlarla birleştirerek; sağlığınızı koruyan, 
-            yaratıcılığınızı tetikleyen ve evinize değer katan özel çözümler sunuyoruz.
-        </p>
+        <div class="about-text">
+            <p>Nuvola Design olarak, çalışma alanlarını sadece bir görev yeri değil, birer ilham kaynağı olarak görüyoruz. Minimalist estetiği, en yüksek düzeydeki ergonomik standartlarla birleştirerek; sağlığınızı koruyan ve yaratıcılığınızı tetikleyen özel çözümler sunuyoruz.</p>
+        </div>
     </section>
 
     <section id="fiyatlandirma">
         <h2 class="section-title">Koleksiyonlar</h2>
         
         <div class="package-row">
-            <div class="package-img"><img src="Düşük Bütçeli Paket.jpg" alt="Essential Collection"></div>
+            <div class="package-img"><img src="paket-1.png" alt="Essential Collection"></div>
             <div class="package-text">
                 <h3>Essential Koleksiyonu</h3>
                 <p>Minimalist ve işlevsel. Yeni nesil çalışma alanları için gerekli tüm temel ergonomik öğeleri premium bir dokunuşla sunar.</p>
@@ -154,7 +163,7 @@
         </div>
 
         <div class="package-row">
-            <div class="package-img"><img src="Orta Bütçeli Paket.jpg" alt="Professional Series"></div>
+            <div class="package-img"><img src="paket-2.png" alt="Professional Series"></div>
             <div class="package-text">
                 <h3>Professional Serisi</h3>
                 <p>Tam gün odaklanma için tasarlandı. Çift monitör desteği ve ayarlanabilir ergonomi ile performansınızı zirveye taşıyın.</p>
@@ -163,7 +172,7 @@
         </div>
 
         <div class="package-row">
-            <div class="package-img"><img src="Yüksek Bütçeli Paket.jpg" alt="Executive Elite"></div>
+            <div class="package-img"><img src="paket-3.png" alt="Executive Elite"></div>
             <div class="package-text">
                 <h3>Executive Elite</h3>
                 <p>Nuvola Design'ın zirvesi. Masif ahşap, deri detaylar ve tamamen size özel kişiselleştirilmiş lüks çalışma deneyimi.</p>
